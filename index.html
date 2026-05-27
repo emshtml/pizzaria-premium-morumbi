@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Pizzaria Delivery Premium</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Pizzaria Delivery Premium - As melhores pizzas artesanais da sua cidade." />
+    <meta name="keywords" content="pizza, delivery, pizzaria, pizza artesanal, pizzaria premium" />
+    <meta name="author" content="Thereza Candida / Emshtml" />
+    <meta name="copyright" content="Copyright © 2026 Thereza Candida / Emshtml. Todos os direitos reservados." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pizzaria Delivery Premium" />
+    <meta property="og:description" content="Peça pizzas artesanais com entrega rápida." />
+    <meta property="og:type" content="website" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f0f0f;
+            color: white;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .gradient {
+            background: linear-gradient(135deg, #ff4d00, #ffb300);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+            <h1 class="text-2xl font-bold text-orange-500">
+                🍕 Delivery Premium
+            </h1>
+
+            <nav class="hidden md:flex gap-6 text-sm">
+                <a href="#inicio" class="hover:text-orange-500 transition">Início</a>
+                <a href="#cardapio" class="hover:text-orange-500 transition">Cardápio</a>
+                <a href="#sobre" class="hover:text-orange-500 transition">Sobre</a>
+                <a href="#contato" class="hover:text-orange-500 transition">Contato</a>
+            </nav>
+
+            <button id="cartButton"
+                class="gradient px-5 py-2 rounded-full font-semibold shadow-lg hover:scale-105 transition">
+                🛒 Carrinho
+            </button>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="inicio"
+        class="min-h-screen flex items-center justify-center text-center px-6 bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1600&auto=format&fit=crop');">
+
+        <div class="bg-black/70 p-10 rounded-3xl max-w-3xl">
+
+            <h2 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                A Melhor Pizza da Cidade
+            </h2>
+
+            <p class="text-zinc-300 text-lg mb-8">
+                Pizzas artesanais preparadas com ingredientes selecionados e entrega rápida.
+            </p>
+
+            <a href="#cardapio"
+                class="gradient px-8 py-4 rounded-full text-lg font-semibold shadow-xl hover:scale-105 transition inline-block">
+                Ver Cardápio
+            </a>
+
+        </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="max-w-7xl mx-auto px-6 py-24">
+
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold mb-4">Nosso Cardápio</h2>
+            <p class="text-zinc-400">
+                Escolha sua pizza favorita
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Produto -->
+            <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-xl card-hover">
+                <img src="https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=1200&auto=format&fit=crop"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pizza Calabresa</h3>
+                    <p class="text-zinc-400 mb-4">
+                        Molho artesanal, queijo premium e calabresa especial.
+                    </p>
+
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-orange-500">
+                            R$ 49,90
+                        </span>
+
+                        <button onclick="addToCart('Pizza Calabresa',49.90)"
+                            class="gradient px-4 py-2 rounded-full font-semibold">
+                            Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto -->
+            <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-xl card-hover">
+                <img src="https://images.unsplash.com/photo-1541745537411-b8046dc6d66c?q=80&w=1200&auto=format&fit=crop"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pizza Frango Catupiry</h3>
+                    <p class="text-zinc-400 mb-4">
+                        Frango desfiado temperado com catupiry cremoso.
+                    </p>
+
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-orange-500">
+                            R$ 54,90
+                        </span>
+
+                        <button onclick="addToCart('Pizza Frango Catupiry',54.90)"
+                            class="gradient px-4 py-2 rounded-full font-semibold">
+                            Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produto -->
+            <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-xl card-hover">
+                <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?q=80&w=1200&auto=format&fit=crop"
+                    class="w-full h-60 object-cover">
+
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-2">Pizza Portuguesa</h3>
+                    <p class="text-zinc-400 mb-4">
+                        Presunto, ovos, cebola e queijo premium.
+                    </p>
+
+                    <div class="flex items-center justify-between">
+                        <span class="text-2xl font-bold text-orange-500">
+                            R$ 57,90
+                        </span>
+
+                        <button onclick="addToCart('Pizza Portuguesa',57.90)"
+                            class="gradient px-4 py-2 rounded-full font-semibold">
+                            Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="bg-zinc-950 py-24 px-6">
+
+        <div class="max-w-5xl mx-auto text-center">
+
+            <h2 class="text-5xl font-bold mb-6">
+                Sobre Nós
+            </h2>
+
+            <p class="text-zinc-400 leading-8 text-lg">
+                A Pizzaria Delivery Premium nasceu para oferecer uma experiência moderna,
+                rápida e deliciosa no delivery. Trabalhamos com ingredientes frescos,
+                massas artesanais e atendimento de alta qualidade.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="py-24 px-6">
+
+        <div class="max-w-4xl mx-auto text-center">
+
+            <h2 class="text-5xl font-bold mb-6">
+                Contato
+            </h2>
+
+            <p class="text-zinc-400 mb-8">
+                Faça seu pedido agora mesmo
+            </p>
+
+            <a href="https://wa.me/5511976794749"
+                class="gradient px-8 py-4 rounded-full text-lg font-semibold inline-block hover:scale-105 transition">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- MODAL CARRINHO -->
+    <div id="cartModal"
+        class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+
+        <div class="bg-zinc-900 p-8 rounded-3xl w-[95%] max-w-lg">
+
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-3xl font-bold">
+                    🛒 Carrinho
+                </h2>
+
+                <button onclick="closeCart()" class="text-red-500 text-2xl">
+                    ✕
+                </button>
+            </div>
+
+            <div id="cartItems" class="space-y-4 mb-6"></div>
+
+            <div class="flex items-center justify-between text-xl font-bold mb-6">
+                <span>Total:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+
+            <button onclick="finishOrder()"
+                class="gradient w-full py-4 rounded-2xl font-bold text-lg hover:scale-[1.02] transition">
+                Finalizar Pedido
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-zinc-800 py-8 text-center text-zinc-500 px-6">
+
+        <p class="mb-2">
+            © 2026 Thereza Candida / Emshtml — Todos os direitos reservados.
+        </p>
+
+        <p class="text-sm leading-7 max-w-4xl mx-auto">
+            Este sistema, layout, identidade visual, estrutura HTML, CSS, JavaScript,
+            funcionalidades, interface, componentes visuais e código-fonte são protegidos
+            pela legislação brasileira de direitos autorais e propriedade intelectual.
+            É proibida a reprodução, distribuição, comercialização, modificação ou revenda
+            sem autorização formal do autor.
+        </p>
+
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        const cart = [];
+
+        const cartButton = document.getElementById("cartButton");
+        const cartModal = document.getElementById("cartModal");
+        const cartItems = document.getElementById("cartItems");
+        const cartTotal = document.getElementById("cartTotal");
+
+        cartButton.addEventListener("click", () => {
+            cartModal.classList.remove("hidden");
+            renderCart();
+        });
+
+        function closeCart() {
+            cartModal.classList.add("hidden");
+        }
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            renderCart();
+            alert(`${name} adicionada ao carrinho!`);
+        }
+
+        function renderCart() {
+            cartItems.innerHTML = "";
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                total += item.price;
+
+                cartItems.innerHTML += `
+                    <div class="flex items-center justify-between bg-zinc-800 p-4 rounded-2xl">
+                        <div>
+                            <h4 class="font-semibold">${item.name}</h4>
+                            <p class="text-orange-500">R$ ${item.price.toFixed(2)}</p>
+                        </div>
+
+                        <button onclick="removeItem(${index})"
+                            class="text-red-500 font-bold">
+                            Remover
+                        </button>
+                    </div>
+                `;
+            });
+
+            cartTotal.innerText = `R$ ${total.toFixed(2)}`;
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        function finishOrder() {
+
+            if (cart.length === 0) {
+                alert("Seu carrinho está vazio!");
+                return;
+            }
+
+            let message = "🍕 Pedido:%0A%0A";
+
+            cart.forEach(item => {
+                message += `• ${item.name} - R$ ${item.price.toFixed(2)}%0A`;
+            });
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+            message += `%0A💰 Total: R$ ${total.toFixed(2)}`;
+
+            window.open(`https://wa.me/5511976794749?text=${message}`);
+
+        }
+    </script>
+
+</body>
+
+</html>
